@@ -1,8 +1,22 @@
+/* eslint-disable max-len */
 class Carousel {
+  constructor(carousel) {
+    this.carousel = carousel;
+    this.imgs = this.carousel.querySelectorAll('img');
+    this.leftBtn = this.carousel.querySelector('.left-button');
+    this.rightBtn = this.carousel.querySelector('right-button');
 
+    this.leftBtn.addEventListener('click', this.changeImage());
+    this.rightBtn.addEventListener('click', this.changeImage());
+  }
+
+  changeImage(){
+      const activeImg = this.carousel.querySelector('.active-img')
+  }
 }
 
-let carousel = document.querySelector();
+const carousel = document.querySelector('.carousel');
+new Carousel(carousel);
 
 /* If You've gotten this far, you're on your own! Although we will give you some hints:
     1. You will need to grab a reference to the carousel, and in it grab the left and right buttons
